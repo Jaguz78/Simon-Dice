@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Dice</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Libre&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="instructions">
+        <h1 class="title">Simon</h1>
+            <p>Simon dice: repite la secuencia</p>
+    </section>
+    <section class="colors">
+        <div class="colors-container">
+            <div id="red" data-color="red"></div>
+            <div id="blue" data-color="blue"></div>
+            <div id="green" data-color="green"></div>
+            <div id="yellow" data-color="yellow"></div>
+            <button type="button" id="listo">Listo</button>
+        </div>
+    </section>
+    <section class="levels">
+        <div class="levels-container">
+            <div class="level" id="one"><p>1</p></div>
+            <div class="level" id="two"><p>2</p></div>
+            <div class="level" id="three"><p>3</p></div>
+        </div>
+    </section>
+    <script src="./index.js"></script>
+</body>
+</html>
