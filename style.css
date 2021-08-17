@@ -19,30 +19,30 @@ body{
     padding: 30px 0px;
 }
 .instructions h1{
-    font-size: 4rem;
+    font-size: 11rem;
     color: #ef476f;
     font-family: 'Press Start 2P', cursive;
 }
 .instructions p{
-    font-size: 2rem;
+    font-size: 4rem;
     color: #f8f9fa;
     font-family:'Averia Libre', cursive;
     margin-top: 10px;
 }
 .colors{
     width: 100vw;
-    height: 65vh;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-content: center;
     padding-top: 30px;
 }
 .colors-container{
-    width: 300px;
-    height: 300px;
+    width: 90%;
+    height: 90%;
     display: flex;
     flex-wrap: wrap;
-    border-radius: 150px;
+    border-radius: 1050px;
     overflow: hidden;
     position: relative;
     transition: ratate 2s;
@@ -55,21 +55,21 @@ body{
     justify-content: center;
 }
 .levels-container{
-    width: 200px;
-    height: 50px;
+    width: 400px;
+    height: 100px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 .level{
-    width: 45px;
-    height: 45px;
-    border-radius: 27.5px;
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Press Start 2P', cursive;
-    font-size: 2rem;
+    font-size: 4rem;
     color: #353535;
     background-color: #454545;
 }
@@ -77,47 +77,46 @@ body{
     width: 50%;
     height: 50%;
     background-color: #ef476f;
-    border-right: #353535 solid 2px;
-    border-bottom: #353535 solid 2px;
+    border-right: #353535 solid 4px;
+    border-bottom: #353535 solid 4px;
 }
 #yellow{
     width: 50%;
     height: 50%;
     background-color: #ffd166;
-    border-top: #353535 solid 2px;
-    border-left: #353535 solid 2px;
+    border-top: #353535 solid 4px;
+    border-left: #353535 solid 4px;
 }
 #green{
     width: 50%;
     height: 50%;
     background-color: #06d6a0;
-    border-right: #353535 solid 2px;
-    border-top: #353535 solid 2px;
+    border-right: #353535 solid 4px;
+    border-top: #353535 solid 4px;
 }
 #blue{
     width: 50%;
     height: 50%;
     background-color: #118ab2;
-    border-left: #353535 solid 2px;  
-    border-bottom: #353535 solid 2px;
+    border-left: #353535 solid 4px;  
+    border-bottom: #353535 solid 4px;
 }
 .illuminated{
     opacity: 0.4;
 }
 #listo{
-    width: 160px;
-    height: 70px;
+    width: 320px;
+    height: 140px;
     position: absolute;
     align-self: center;
     right: calc(25%);
-    border-radius: 20px;
-    border: solid #353535 4px;
+    border-radius: 40px;
+    border: solid #353535 8px;
     background-color: #f8f9fa;
-    font-size: 1.8rem;
+    font-size: 3.6rem;
     font-family: 'Press Start 2P', cursive;
     color: #353535;
     font-weight: bold;
-    transition: 450ms transform;
 }
 .hide{
     display: none;
