@@ -138,12 +138,10 @@ class Juego{
         this.level++
         switch(this.level){
             case 2: {one.style.backgroundColor = "#06d6a0"
-                    one.style.color = "#f8f9fa"
-                    this.frecuencia -= 50}
+                    one.style.color = "#f8f9fa"}
             break
             case 3: {two.style.backgroundColor = "#06d6a0"
-                    two.style.color = "#f8f9fa"
-                    this.frecuencia -= 100}
+                    two.style.color = "#f8f9fa"}
             break
             case 4: {three.style.backgroundColor = "#06d6a0"
                     three.style.color = "#f8f9fa"}
