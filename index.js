@@ -31,6 +31,7 @@ class Juego{
         this.resetLevels();
         this.check = this.check.bind(this);
         listo.classList.add("hide");
+        this.frecuencia = 700;
         this.level = 1;
         this.colors = {
             red,
@@ -53,7 +54,7 @@ class Juego{
     nextLevel(){
         this.subnivel = 0;
         this.illuminateSequence();
-        const podesJugar = 700*3*this.level;
+        const podesJugar = this.frecuencia*3*this.level;
         setTimeout(_=>{this.addEvents()},podesJugar)
     }
     fromNumberToColor(num){
@@ -75,12 +76,12 @@ class Juego{
     illuminateSequence(){
         for(let i=0; i<this.level*3; i++){
             let color = this.fromNumberToColor(this.sequence[i]);
-            setTimeout(_=> this.illuminateColor(color), 700*i)
+            setTimeout(_=> this.illuminateColor(color), this.frecuencia*i)
         }
     }
     illuminateColor(color){
         this.colors[color].classList.add('illuminated')
-        this.playSound(this.fromColorToNumber(color))
+        this.switchAudio(this.fromColorToNumber(color))
         setTimeout(() => {
             this.turnOffColor(color);
         }, 350);
@@ -103,7 +104,7 @@ class Juego{
     check(ev){
         const nombreColor = ev.target.dataset.color;
         const numeroColor = this.fromColorToNumber(nombreColor);
-        this.playSound(numeroColor);
+        this.switchAudio(numeroColor);
         this.illuminateColor(nombreColor);
         if(numeroColor === this.sequence[this.subnivel]){
             this.subnivel++;
@@ -137,36 +138,38 @@ class Juego{
         this.level++
         switch(this.level){
             case 2: {one.style.backgroundColor = "#06d6a0"
-                    one.style.color = "#f8f9fa"}
+                    one.style.color = "#f8f9fa"
+                    this.frecuencia -= 50}
             break
             case 3: {two.style.backgroundColor = "#06d6a0"
-                    two.style.color = "#f8f9fa"}
+                    two.style.color = "#f8f9fa"
+                    this.frecuencia -= 100}
             break
             case 4: {three.style.backgroundColor = "#06d6a0"
                     three.style.color = "#f8f9fa"}
             break
         }
     }
-    playSound(color){
+    playSound(audio){
+        const clone = audio.cloneNode()
+        clone.play()
+    }
+    switchAudio(color){
         switch(color){
-            case 0: {
-                don.play()   
-            }break
-            case 1: {
-                re.play()
-            }break
-            case 2: {
-                mi.play()  
-            }break
-            case 3: {
-                fa.play()
-            }break
+            case 0: this.playSound(don)
+            break
+            case 1: this.playSound(re)
+            break
+            case 2: this.playSound(mi)
+            break
+            case 3: this.playSound(fa)
+            break
         }
     }
 }
 
 function startGame(){
-    let juego = new Juego();
+    new Juego();
 }
 
 

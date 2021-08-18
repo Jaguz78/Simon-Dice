@@ -35,8 +35,8 @@ body{
     display: flex;
     justify-content: center;
     align-content: center;
-    padding-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 50px;
+    margin-bottom: 70px;
 }
 .colors-container{
     width: 300px;
